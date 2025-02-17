@@ -1,0 +1,51 @@
+body {
+    background-color: #ededff;
+    margin-bottom: 100px;
+}
+
+.dashboard {
+    margin-bottom: 2rem;
+}
+
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    border: none;
+}
+
+.card-header {
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.metric-container {
+    height: 400px;
+    position: relative;
+}
+
+.services-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.service-item:last-child {
+    border-bottom: none;
+}
+
+.service-name {
+    font-weight: 500;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}

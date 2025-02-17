@@ -1,0 +1,6 @@
+services:
+  - nginx
+  - postgresql
+  - redis
+  - apache2
+  - TextInputMenuAgent
