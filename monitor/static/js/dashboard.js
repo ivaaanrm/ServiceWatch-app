@@ -79,7 +79,7 @@ function updateChartWithLiveData(data) {
     chart.data.datasets[2].data.push(data.disk_percent);
     
     // Keep only last 30 data points for live view
-    if (chart.data.labels.length > 30) {
+    if (chart.data.labels.length > 100) {
         chart.data.labels.shift();
         chart.data.datasets.forEach(dataset => dataset.data.shift());
     }
@@ -92,7 +92,7 @@ function updateServicesList(services) {
     servicesList.innerHTML = services.map(service => 
         `<div class="service-item">
             <span class="service-name">${service.name}</span>
-            <span class="badge ${service.status === 'running' ? 'bg-success' : 'bg-warning'}">${service.status}</span>
+            <span class="badge ${service.status === 'running' ? 'bg-success' : 'bg-danger'}">${service.status}</span>
          </div>`
     ).join('');
 }

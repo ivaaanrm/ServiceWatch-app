@@ -56,6 +56,7 @@ class SystemStatsConsumer(AsyncWebsocketConsumer):
     def get_service_status(self, service_name):
         for proc in psutil.process_iter(['name', 'status']):
             try:
+                print(proc)
                 if proc.info['name'] and service_name.lower() in proc.info['name'].lower():
                     return {'name': proc.info['name'], 'status': proc.info['status']}
             except (psutil.NoSuchProcess, psutil.AccessDenied):
